@@ -1,0 +1,20 @@
+/* 27) Faça um programa que peça um número inteiro e determine se ele é ou não um número primo. Um número primo é aquele que é divisível somente por ele mesmo e por 1. */
+
+var numero = parseInt(prompt("Entre com um número: "), 10)
+
+if (numero == 0 || numero == 1)
+  console.log(numero + " não é primo")
+
+if (numero > 1) {
+  var divisores = 0
+  for (var divisor = 1; divisor < numero; divisor++) {
+    if (numero % divisor == 0)
+      divisores += 1
+      if (divisores > 1)
+        break
+  }
+  if (divisores > 1)
+    console.log(numero + " não é primo")
+  else
+    console.log(numero + " é primo")
+}
